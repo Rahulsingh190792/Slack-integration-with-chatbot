@@ -100,8 +100,8 @@ slack_client=SlackClient(slack_bot_token)
 ds=joblib.load('./data/model.pkl')
 
 # #################
-p=Clean('./data/Complete_teamcenter_clean_data_with_product_information.csv')
-dataframe=p.dataframe('./data/Complete_teamcenter_clean_data_with_product_information.csv')
+p=Clean('./data/Complete_clean_data_with_product_information.csv')
+dataframe=p.dataframe('./data/Complete_clean_data_with_product_information.csv')
 
 
 #
@@ -191,7 +191,7 @@ def some_processing(username, event_ts, real_name, ):
         logger.info("step1")
         user_name=real_name
         source_doc=username
-        target_docs=p.cleaning('./data/Complete_teamcenter_clean_data_with_product_information.csv')
+        target_docs=p.cleaning('./data/Complete_clean_data_with_product_information.csv')
         splitting=source_doc.split()
         if len(splitting) > 3:
             try:
